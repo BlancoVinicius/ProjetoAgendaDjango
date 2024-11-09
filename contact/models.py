@@ -9,6 +9,9 @@ class Contact(models.Model):
     email = models.EmailField(max_length=50, blank= True)
     created_date = models.DateTimeField(default=timezone.now)
     desceription = models.TextField(blank=True)
+    picture = models.ImageField(blank=True, upload_to='pictures/%Y/%m/')
     show = models.BooleanField(default=True)
 
+    def __str__(self) -> str:
+        return f'{self.first_name} {self.last_name}'
 
