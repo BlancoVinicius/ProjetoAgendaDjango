@@ -77,6 +77,8 @@ docs/_build/
 # PyBuilder
 target/
 
+# VSCODE
+.vscode/
 
 ### Django ###
 *.log
@@ -86,6 +88,7 @@ __pycache__/
 local_settings.py
 static/
 media/
+utils/
 
 .env
 db.sqlite3
