@@ -90,5 +90,6 @@ static/
 media/
 utils/
 
+venv/
 .env
 db.sqlite3
