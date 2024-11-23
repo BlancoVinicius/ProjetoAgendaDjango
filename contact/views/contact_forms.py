@@ -8,10 +8,14 @@ from contact.forms import ContatcForm
 def create(request:request.HttpRequest):
     
     if request.method == 'POST':
-        
+        form = ContatcForm(request.POST)
         context = {
-            'form': ContatcForm(request.POST),
+            'form': form
         }
+
+        if form.is_valid():
+            form.save()
+            return redirect('contact:create')
     
         return render(
             request,
