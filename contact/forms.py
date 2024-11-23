@@ -2,7 +2,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from contact.models import Contact
 
-class ContatcForm(forms.ModelForm):
+class ContactForm(forms.ModelForm):
     ### criando um campo no proprio form
     first_name = forms.CharField(
         widget=forms.TextInput(

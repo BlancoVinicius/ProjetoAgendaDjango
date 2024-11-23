@@ -5,7 +5,8 @@ app_name = 'contact'
 
 urlpatterns = [
     # path('<int:id_contact>/', views.contact, name='contact'),
-    path('contact/<int:id_contact>/', views.contact, name='contact'),
+    path('contact/<int:contact_id>/update/', views.update, name='update'),
+    path('contact/<int:contact_id>/', views.contact, name='contact'),
     path('contact/create/', views.create, name='create'),
     
     path('search/', views.search, name='search'),

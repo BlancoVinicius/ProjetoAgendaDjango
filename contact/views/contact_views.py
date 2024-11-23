@@ -25,9 +25,9 @@ def index(request):
         context=context
     )
 
-def contact(request, id_contact):
+def contact(request, contact_id):
     # single_contact = Contact.objects.filter(pk=id_contact).first()
-    single_contact = get_object_or_404(Contact,pk=id_contact,show=True)
+    single_contact = get_object_or_404(Contact,pk=contact_id,show=True)
 
     return render(
         request,
